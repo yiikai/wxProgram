@@ -7,6 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    winWidth: 0,
+    winHeight: 0, 
+    currentTab: 0, 
   },
 
   /**
@@ -17,6 +20,37 @@ Page({
     var that = this
     WxSearch.init(that, 43, ['小缩卵','顾文','小鸡鸡']);
     WxSearch.initMindKeys(['weappdev.com', '微信小程序开发', '微信开发', '微信小程序']);
+
+    wx.getSystemInfo({
+
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
+    }); 
+  },
+
+  bindChange: function (e) {
+
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
+
+  }, 
+
+  swichNav: function (e) {
+
+    var that = this;
+
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
   },
 
   wxSearchFn: function (e) {
