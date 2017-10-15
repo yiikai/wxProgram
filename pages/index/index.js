@@ -10,6 +10,22 @@ Page({
     winWidth: 0,
     winHeight: 0, 
     currentTab: 0, 
+    lists: [{
+      imageUrl:'../../resurses/1.jpg',
+      name: '应季鲜果',
+      note: '河南的',
+      price: '￥190.00'
+    }, {
+      imageUrl: '../../resurses/1.jpg',
+      name: '精致糕点',
+      note: '河南的',
+      price: '￥190.00'
+    }, {
+      imageUrl: '../../resurses/1.jpg',
+      name: '全球美食烘培原料',
+      note: '河南的',
+      price: '￥190.00'
+    }],
   },
 
   /**
@@ -82,7 +98,7 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监听 页面初次渲染完成
    */
   onReady: function () {
 
