@@ -11,22 +11,23 @@
     </view>
   </view>
 </view>
+
 <view class="swiper-tab">  
-    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">哈哈</view>  
-    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">呵呵</view>  
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">嘿嘿</view>  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">小缩卵</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">顾文</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">傻逼</view>  
 </view>  
   
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
     <!-- 我是哈哈 -->  
     <swiper-item>  
-      <view>我是哈哈</view>  
+      <view>我是小缩卵</view>  
     </swiper-item>  
     <!-- 我是呵呵 -->  
     <swiper-item>  
-      <view>我是呵呵</view>  
+      <view>我是顾文</view>  
     </swiper-item>  
-    <!-- 我是嘿嘿 -->  
+    <!-- 我是傻逼 -->  
     <swiper-item>  
       <view>我是嘿嘿</view>  
     </swiper-item>  
