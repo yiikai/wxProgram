@@ -30,7 +30,7 @@
             <text class="list-item-price">{{item.price}}</text>
         </view>
     </view>
-    <view class="sv-footer">可以在小程序入口进入得到商城</view>
+    <view class="sv-footer">可以在小程序入口进入商城</view>
     </scroll-view>
     </swiper-item>  
     <!-- 我是呵呵 -->  
