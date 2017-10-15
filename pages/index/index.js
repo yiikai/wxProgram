@@ -10,8 +10,8 @@ Page({
    */
   data: {
     winWidth: 0,
-    winHeight: 0, 
-    currentTab: 0, 
+    winHeight: 0,
+    currentTab: 0,
   },
 
   /**
@@ -20,7 +20,7 @@ Page({
   onLoad: function (options) {
     console.log('onLoad')
     var that = this
-    WxSearch.init(that, 43, ['小缩卵','顾文','小鸡鸡']);
+    WxSearch.init(that, 43, ['小缩卵', '顾文', '小鸡鸡']);
     WxSearch.initMindKeys(['weappdev.com', '微信小程序开发', '微信开发', '微信小程序']);
 
     wx.getSystemInfo({
@@ -30,13 +30,13 @@ Page({
           winHeight: res.windowHeight
         });
       }
-    }); 
+    });
   },
 
   bindChange: function (e) {
     var that = this;
     that.setData({ currentTab: e.detail.current });
-  }, 
+  },
 
   swichNav: function (e) {
     var that = this;
@@ -86,20 +86,15 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    // wx.request({
-    //   url: 'www.baidu.com', //仅为示例，并非真实的接口地址
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success: function (res) {
-    //     console.log(res.data)
-    //   }
-    // })
-    backen.requesturl();
+  reqCallback: function (data, code, header) {
+
   },
 
-  
+  onReady: function () {
+    backen.requesturl("www.baidu.com", this.reqCallback);
+  },
+
+
   /**
    * 生命周期函数--监听页面显示
    */
